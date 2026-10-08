@@ -1,0 +1,31 @@
+@import './fonts.css';
+
+:root {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #202521;
+  background: #f7f8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* { box-sizing: border-box; }
+
+html { min-width: 320px; min-height: 100%; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button, textarea { font: inherit; }
+
+button:focus-visible, textarea:focus-visible, a:focus-visible {
+  outline: 2px solid #6bab8a;
+  outline-offset: 2px;
+}
+
+#root { min-height: 100vh; }

@@ -1,0 +1,25 @@
+name: dua-datalab-prod
+services:
+  web:
+    build:
+      context: .
+      target: runtime
+    image: dua-datalab:production
+    ports:
+      - "${HTTP_PORT:-8080}:8080"
+    networks:
+      default:
+      proxy:
+        aliases:
+          - dua-datalab
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  proxy:
+    external: true
+    name: duadata_duadata-net
